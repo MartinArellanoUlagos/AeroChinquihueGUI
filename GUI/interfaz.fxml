@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ClienteController"
+      spacing="10" alignment="CENTER" style="-fx-padding:20;">
+
+    <Label text="Clientes" style="-fx-font-size:20;"/>
+
+    <HBox spacing="10">
+        <Label text="RUT:"/>
+        <TextField fx:id="txtRut"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Nombre:"/>
+        <TextField fx:id="txtNombre"/>
+    </HBox>
+
+    <Button text="Agregar Cliente" onAction="#agregarCliente"/>
+
+    <TableView fx:id="tablaClientes" prefHeight="200">
+        <columns>
+            <TableColumn text="RUT" fx:id="colRut"/>
+            <TableColumn text="Nombre" fx:id="colNombre"/>
+        </columns>
+    </TableView>
+
+    <Button text="Volver" onAction="#volverMenu"/>
+
+</VBox>
